@@ -44,16 +44,16 @@ export const resumeData = {
 
   projects: [
     {
-      id: 0,
-      title: "V4 Engineering Portfolio",
+      id: 1,
+      title: "Meme Generator PRO",
       description:
-        "A high-performance, responsive professional portfolio built with React 19 and Tailwind v4, featuring advanced CSS effects and glassmorphism.",
-      link: "https://qais-z-resume.vercel.app/", // Update this link after Vercel deployment
-      image: "Qais-z-Resume.png",
-      tags: ["React", "Tailwind v4", "PostCSS", "Vite"],
+        "A dynamic, full-stack SaaS application designed for rapid deployment, utilizing Firebase for high availability and Canvas API for image processing.",
+      link: "https://meme-generator-pro-three.vercel.app/login",
+      image: "meme-pic.png",
+      tags: ["React", "Firebase", "Canvas API", "Google OAuth"],
     },
     {
-      id: 1,
+      id: 2,
       title: "Cash Quiz Engine",
       description:
         "An interactive, value-based reward application designed to test logic and decision-making through dynamic DOM manipulation.",
@@ -62,13 +62,13 @@ export const resumeData = {
       tags: ["JavaScript", "DOM Manipulation", "Vercel"],
     },
     {
-      id: 2,
-      title: "Meme Generator PRO",
+      id: 3,
+      title: "V4 Engineering Portfolio",
       description:
-        "A dynamic, full-stack SaaS application designed for rapid deployment, utilizing Firebase for high availability and Canvas API for image processing.",
-      link: "https://meme-generator-pro-three.vercel.app/login",
-      image: "meme-pic.png",
-      tags: ["React", "Firebase", "Canvas API", "Google OAuth"],
+        "A high-performance, responsive professional portfolio built with React 19 and Tailwind v4, featuring advanced CSS effects and glassmorphism.",
+      link: "https://qais-z-resume.vercel.app/", // Update this link after Vercel deployment
+      image: "Qais-z-Resume.png",
+      tags: ["React", "Tailwind v4", "PostCSS", "Vite"],
     },
   ],
 

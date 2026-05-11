@@ -7,7 +7,7 @@ export const resumeData = {
     email: "zarifiqais1@gmail.com",
     phone: "+1 (925) 681-8152",
     location: "Bay Point, CA",
-    profilePic: "/Qais.png",
+    profilePic: "/profile.png",
     linkedin: "https://www.linkedin.com/in/qais-zarifi-238928270/",
     github: "https://github.com/zarifiqais1",
   },

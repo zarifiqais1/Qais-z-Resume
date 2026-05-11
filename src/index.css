@@ -1,8 +1,6 @@
-/* --- 1. Tailwind v4 Directive --- */
-/* In Tailwind v4, we use @import instead of @tailwind directives */
 @import "tailwindcss";
 
-/* --- 2. Global Variables & Theme Configuration --- */
+/* --- 1. Global Variables & Theme Configuration --- */
 :root {
   /* Light Theme Colors */
   --text: #6b6375;
@@ -18,12 +16,11 @@
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   /* Typography Fonts */
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
 
   /* Default Body Styling */
-  font-family: var(--sans);
   line-height: 145%;
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -33,7 +30,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- 3. Dark Mode Overrides --- */
+/* --- 2. Dark Mode Overrides --- */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -50,37 +47,44 @@
   }
 }
 
-/* --- 4. Base Element Reset & Styles --- */
-body {
-  margin: 0;
-  background-color: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
+/* --- 3. Base Element Reset & Styles --- */
+@layer base {
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  #root {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--text-h);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
-#root {
-  max-width: 100%;
-  margin: 0 auto;
+/* --- 4. Tailwind Custom Utilities --- */
+@theme {
+  --color-accent: var(--accent);
+  --color-accent-bg: var(--accent-bg);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--heading);
-  color: var(--text-h);
-}
-
-/* Fix for large images - Ensuring Tailwind classes take control */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* --- 5. Tailwind Custom Utilities (v4 Syntax) --- */
 @utility btn-accent {
   background-color: var(--accent);
   color: white;

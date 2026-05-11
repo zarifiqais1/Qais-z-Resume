@@ -8,7 +8,7 @@ const Header = ({ data }) => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-accent/5 blur-[120px] -z-10 animate-pulse"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        {/* Profile Image - Slightly optimized size for desktop */}
+        {/* Profile Image Section */}
         <div className="mb-8 relative inline-block">
           <div className="absolute inset-0 bg-accent blur-3xl opacity-20 rounded-full"></div>
           <img
@@ -18,17 +18,37 @@ const Header = ({ data }) => {
           />
         </div>
 
-        {/* Dynamic Name Heading - Reduced size for better proportions */}
+        {/* Dynamic Name Heading */}
         <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-3 tracking-tighter leading-none">
           {data.name}
           <span className="text-accent animate-pulse">.</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-slate-400 dark:text-slate-500 mb-8 font-light tracking-tight italic">
+        <p className="text-lg md:text-xl text-slate-400 dark:text-slate-500 mb-6 font-light tracking-tight italic">
           {data.title}
         </p>
 
-        {/* Contact Information Bar - Compact layout */}
+        {/* Languages Section - Highlighted Expertise */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="px-4 py-2 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm transition-hover hover:border-accent/30">
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 block mb-1">
+              Fluent / Native
+            </span>
+            <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+              English • Dari • Pashto
+            </span>
+          </div>
+          <div className="px-4 py-2 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm transition-hover hover:border-accent/30">
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 block mb-1">
+              Conversational
+            </span>
+            <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+              Turkish • Urdu
+            </span>
+          </div>
+        </div>
+
+        {/* Contact Information Bar */}
         <div className="flex flex-wrap justify-center gap-y-3 gap-x-6 text-[10px] md:text-xs font-black text-slate-500 mb-10 uppercase tracking-[0.2em]">
           <a
             href={`mailto:${data.email}`}
@@ -55,7 +75,7 @@ const Header = ({ data }) => {
           </div>
         </div>
 
-        {/* Social & Action Buttons - Slightly smaller padding */}
+        {/* Social & Action Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href={data.linkedin}

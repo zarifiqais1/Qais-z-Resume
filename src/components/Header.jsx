@@ -1,17 +1,19 @@
 import React from "react";
+// Import the profile image using Vite's standard method
+import profileImg from "../assets/profile.png";
 
 const Header = ({ data }) => {
   return (
     <header className="relative pt-16 pb-20 overflow-hidden text-center">
-      {/* Decorative background glow to match your modern UI */}
+      {/* Decorative background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-accent/5 blur-[120px] -z-10 animate-pulse"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        {/* Profile Image - Modern Rounded Corner Style */}
+        {/* Profile Image Section */}
         <div className="mb-10 relative inline-block">
           <div className="absolute inset-0 bg-accent blur-3xl opacity-20 rounded-full"></div>
           <img
-            src={`/src/assets/${data.profilePic}`}
+            src={profileImg}
             alt={data.name}
             className="w-44 h-44 md:w-52 md:h-52 rounded-[2.5rem] object-cover border-4 border-white dark:border-slate-800 shadow-2xl relative z-10 hover:rotate-2 hover:scale-105 transition-all duration-500"
           />
@@ -27,7 +29,7 @@ const Header = ({ data }) => {
           {data.title}
         </p>
 
-        {/* Contact Information Bar - With Clickable Email */}
+        {/* Contact Information Bar */}
         <div className="flex flex-wrap justify-center gap-y-4 gap-x-8 text-[10px] md:text-xs font-black text-slate-500 mb-12 uppercase tracking-[0.2em]">
           <a
             href={`mailto:${data.email}`}
